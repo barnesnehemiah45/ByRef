@@ -1,0 +1,2 @@
+# ByRef
+Func C(ByRef $a,$Label);Returns Index Num Col of Seek Label in Array     Local $lr=UBound($a,1)-1     Local $lc=UBound($a,2)-1     Local $iLabel="None"     For $c=0 To $lc         $iLabel=$a[0][$c]         If $iLabel=$Label Then Return $c     Next     Debug("[ERROR]Label Not Found! "&amp;$Label)     Return "[ERROR]" EndFunc  Func ByCn(ByRef $a,$Row,$Label)     Return Number($a[$Row][C($a,$Label)],3) EndFunc  Func ByC(ByRef $a,$Row,$Label)     Return $a[$Row][C($a,$Label)] EndFunc
